@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>true</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8EEF4E51-7BD4-4C05-8BB7-9B5DFCDD5AD7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MasterSbsa</RootNamespace>
+    <AssemblyName>MasterSbsa</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>\\plutao\Desenv\WEBSIC\Referencias\Web\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ECRUD">
+      <HintPath>\\oceano\Desenvvb\99 - USERS\WVS\ECRUD\ECRUD.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\OPERACOES\FotosOperacoes\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\oracle\product\11.2.0\client_1\odp.net\bin\4\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="401.aspx" />
+    <Content Include="404.aspx" />
+    <Content Include="503.aspx" />
+    <Content Include="App_Themes\AzulEscuro\AzulEscuro.css" />
+    <Content Include="App_Themes\Azul\Azul.css" />
+    <Content Include="App_Themes\Limao\Limao.css" />
+    <Content Include="App_Themes\Ouro\Ouro.css" />
+    <Content Include="App_Themes\OutubroRosa\OutubroRosa.css" />
+    <Content Include="App_Themes\Padrao\Padrao.css" />
+    <Content Include="App_Themes\Sbsa\Sbsa.css" />
+    <Content Include="App_Themes\Vermelho\Vermelho.css" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\ECRUD.dll" />
+    <Content Include="bin\ECRUD.pdb" />
+    <Content Include="bin\ECRUD.xml" />
+    <Content Include="bin\MasterSbsa.dll" />
+    <Content Include="bin\MasterSbsa.pdb" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Oracle.DataAccess.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.min14.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\highslide.css" />
+    <Content Include="Content\hover.css" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\ToolTip.css" />
+    <Content Include="Content\Unificado-min.css" />
+    <Content Include="DetalheConfig.aspx" />
+    <Content Include="Erros.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Imagens\AscWhite.png" />
+    <Content Include="Imagens\DescWhite.png" />
+    <Content Include="Imagens\Logo HTML.png" />
+    <Content Include="Imagens\Logo.png" />
+    <Content Include="Imagens\LOGOTECON.JPG" />
+    <Content Include="Imagens\SetaBaixo.png" />
+    <Content Include="Imagens\SetaCima.png" />
+    <Content Include="Imagens\SetaDireita.png" />
+    <Content Include="Imagens\SetaEsquerda.png" />
+    <Content Include="Imagens\Upload 16X16.png" />
+    <Content Include="Index.aspx" />
+    <Content Include="obj\Debug\MasterSbsa.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MasterSbsa.dll" />
+    <Content Include="obj\Debug\MasterSbsa.pdb" />
+    <Content Include="obj\Release\MasterSbsa.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\MasterSbsa.dll" />
+    <Content Include="obj\Release\MasterSbsa.pdb" />
+    <Content Include="obj\x86\Debug\MasterSbsa.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\x86\Debug\MasterSbsa.dll" />
+    <Content Include="obj\x86\Debug\MasterSbsa.pdb" />
+    <Content Include="PrincipalConfig.aspx" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\data.js" />
+    <Content Include="Scripts\exporting.js" />
+    <Content Include="Scripts\graphics\close.png" />
+    <Content Include="Scripts\graphics\closeX.png" />
+    <Content Include="Scripts\graphics\controlbar-black-border.gif" />
+    <Content Include="Scripts\graphics\controlbar-text-buttons.png" />
+    <Content Include="Scripts\graphics\controlbar-white-small.gif" />
+    <Content Include="Scripts\graphics\controlbar-white.gif" />
+    <Content Include="Scripts\graphics\controlbar2.gif" />
+    <Content Include="Scripts\graphics\controlbar3.gif" />
+    <Content Include="Scripts\graphics\controlbar4-hover.gif" />
+    <Content Include="Scripts\graphics\controlbar4.gif" />
+    <Content Include="Scripts\graphics\fullexpand.gif" />
+    <Content Include="Scripts\graphics\geckodimmer.png" />
+    <Content Include="Scripts\graphics\icon.gif" />
+    <Content Include="Scripts\graphics\loader.gif" />
+    <Content Include="Scripts\graphics\loader.white.gif" />
+    <Content Include="Scripts\graphics\outlines\beveled.png" />
+    <Content Include="Scripts\graphics\outlines\drop-shadow.png" />
+    <Content Include="Scripts\graphics\outlines\glossy-dark.png" />
+    <Content Include="Scripts\graphics\outlines\outer-glow.png" />
+    <Content Include="Scripts\graphics\outlines\rounded-black.png" />
+    <Content Include="Scripts\graphics\outlines\rounded-white.png" />
+    <Content Include="Scripts\graphics\resize.gif" />
+    <Content Include="Scripts\graphics\scrollarrows.png" />
+    <Content Include="Scripts\graphics\zoomin.cur" />
+    <Content Include="Scripts\graphics\zoomout.cur" />
+    <Content Include="Scripts\gridviewScroll.min.js" />
+    <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\highslide-full.js" />
+    <Content Include="Scripts\jquery-1-8-2.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-2.2.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1-9-1.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\no-data-to-display.js" />
+    <Content Include="Scripts\Relatorios.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\ToolTip.js" />
+    <Content Include="Scripts\Unificado-min.js" />
+    <Content Include="VivaVozAppGetConfig.aspx" />
+    <Content Include="VivaVozAppPostConfig.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="401.aspx.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="401.aspx.designer.cs">
+      <DependentUpon>401.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="503.aspx.cs">
+      <DependentUpon>503.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="503.aspx.designer.cs">
+      <DependentUpon>503.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bll\LogSentinela.cs" />
+    <Compile Include="Bll\Usuario.cs" />
+    <Compile Include="Dal\Enums.cs" />
+    <Compile Include="Dal\LogSentinela.cs" />
+    <Compile Include="Dal\Usuario.cs" />
+    <Compile Include="Detalhe.Master.cs">
+      <DependentUpon>Detalhe.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Detalhe.Master.designer.cs">
+      <DependentUpon>Detalhe.Master</DependentUpon>
+    </Compile>
+    <Compile Include="DetalheConfig.aspx.cs">
+      <DependentUpon>DetalheConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalheConfig.aspx.designer.cs">
+      <DependentUpon>DetalheConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erros.aspx.cs">
+      <DependentUpon>Erros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erros.aspx.designer.cs">
+      <DependentUpon>Erros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobilePost.Master.cs">
+      <DependentUpon>MobilePost.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobilePost.Master.designer.cs">
+      <DependentUpon>MobilePost.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MobileGet.Master.cs">
+      <DependentUpon>MobileGet.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileGet.Master.designer.cs">
+      <DependentUpon>MobileGet.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UsuarioAd.cs" />
+    <Compile Include="Principal.Master.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Principal.Master.designer.cs">
+      <DependentUpon>Principal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalConfig.aspx.cs">
+      <DependentUpon>PrincipalConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrincipalConfig.aspx.designer.cs">
+      <DependentUpon>PrincipalConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PrincipalMenuBasico.Master.cs">
+      <DependentUpon>PrincipalMenuBasico.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PrincipalMenuBasico.Master.designer.cs">
+      <DependentUpon>PrincipalMenuBasico.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Base.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Util\Funcoes.cs" />
+    <Compile Include="VivaVozAppGet.Master.cs">
+      <DependentUpon>VivaVozAppGet.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VivaVozAppGet.Master.designer.cs">
+      <DependentUpon>VivaVozAppGet.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VivaVozAppGetConfig.aspx.cs">
+      <DependentUpon>VivaVozAppGetConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VivaVozAppGetConfig.aspx.designer.cs">
+      <DependentUpon>VivaVozAppGetConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VivaVozAppPost.Master.cs">
+      <DependentUpon>VivaVozAppPost.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VivaVozAppPost.Master.designer.cs">
+      <DependentUpon>VivaVozAppPost.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VivaVozAppPostConfig.aspx.cs">
+      <DependentUpon>VivaVozAppPostConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VivaVozAppPostConfig.aspx.designer.cs">
+      <DependentUpon>VivaVozAppPostConfig.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Padrao\Padrao.skin" />
+    <Content Include="App_Themes\Azul\Azul.skin" />
+    <Content Include="App_Themes\AzulEscuro\AzulEscuro.skin" />
+    <Content Include="App_Themes\Ouro\Ouro.skin" />
+    <Content Include="App_Themes\Limao\Limao.skin" />
+    <Content Include="App_Themes\OutubroRosa\OutubroRosa.skin" />
+    <Content Include="App_Themes\Vermelho\Vermelho.skin" />
+    <Content Include="App_Themes\Sbsa\Sbsa.skin" />
+    <Content Include="bin\MasterSbsa.dll.config" />
+    <Content Include="Detalhe.Master" />
+    <None Include="fonts\fontawesome-webfont.eot" />
+    <None Include="fonts\fontawesome-webfont.ttf" />
+    <None Include="fonts\fontawesome-webfont.woff" />
+    <None Include="fonts\fontawesome-webfont.woff2" />
+    <None Include="fonts\FontAwesome.otf" />
+    <Content Include="Principal.Master" />
+    <Content Include="PrincipalMenuBasico.Master" />
+    <Content Include="MobilePost.Master" />
+    <Content Include="MobileGet.Master" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\MasterSbsa.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\MasterSbsa.csprojAssemblyReference.cache" />
+    <Content Include="obj\Debug\MasterSbsa.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Release\MasterSbsa.csprojResolveAssemblyReference.cache" />
+    <Content Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\x86\Debug\MasterSbsa.csprojResolveAssemblyReference.cache" />
+    <None Include="Scripts\graphics\outlines\Outlines.psd" />
+    <Content Include="VivaVozAppGet.Master" />
+    <Content Include="VivaVozAppPost.Master" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\x64\Debug\" />
+    <Folder Include="bin\x86\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+    <Folder Include="obj\x64\Debug\" />
+    <Folder Include="obj\x86\Debug\TempPE\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53428</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>del /Q /F "%25TEMP%25\Sbsa\*.*"
+xcopy "$(ProjectDir)"*.Master "%25TEMP%25\Sbsa\" /Y
+xcopy "$(ProjectDir)"*.aspx "%25TEMP%25\Sbsa\" /Y
+xcopy "$(ProjectDir)\Content\"*.* "%25TEMP%25\Sbsa\Content\" /S/Y
+xcopy "$(ProjectDir)\fonts\"*.* "%25TEMP%25\Sbsa\fonts\" /S/Y
+xcopy "$(ProjectDir)\Scripts\"*.* "%25TEMP%25\Sbsa\Scripts\" /S/Y
+xcopy "$(ProjectDir)\Imagens\"*.* "%25TEMP%25\Sbsa\Imagens\" /S/Y
+xcopy "$(ProjectDir)\App_Themes\"*.* "%25TEMP%25\Sbsa\App_Themes\" /S/Y</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

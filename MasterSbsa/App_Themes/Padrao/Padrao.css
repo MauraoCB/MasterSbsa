@@ -1,0 +1,219 @@
+﻿::-webkit-scrollbar {
+    width: 15px!important;
+    height: 15px!important;
+}
+::-webkit-scrollbar-track-piece {
+    background-color: #b4b7b7!important;
+}
+::-webkit-scrollbar-thumb:vertical {
+    height: 30px!important;
+    background-color: #5f5f5f!important;
+}
+::-webkit-scrollbar-thumb:horizontal {
+    height: 30px!important;
+    background-color: #5f5f5f!important;
+}
+div.menu ul li a {
+    color: white!important;
+}
+.static {
+    background-color: #5f5f5f!important;
+    border: 1px #5f5f5f solid!important;
+}
+.dynamic {
+    background-color: #5f5f5f!important;
+    border: 1px #5f5f5f solid!important;
+}
+.panel-default > .panel-heading {
+    color: white!important;
+    background-color: #5f5f5f!important;
+    border-color: #ddd;
+}
+.static:hover {
+    background-color: White!important;
+    color: #0072BC!important;
+}
+.dynamic a:hover {
+    background-color: White!important;
+    color: #0072BC!important;
+    border: 1px #0072BC solid!important;
+}
+.AvisoPeriodo {
+    color: white!important;
+}
+[id$='Freeze'] tr td {
+    background-color: #5f5f5f!important;
+}
+[id$='PanelItem'] {
+    background-color: #5f5f5f!important;
+}
+[id$='PanelHeader'] {
+    background-color: #5f5f5f!important;
+}
+[id$='VerticalRail'] {
+    background-color: #5f5f5f!important;
+}
+[id$='HorizontalRail'] {
+    background-color: #5f5f5f!important;
+}
+[id$='Vertical_BIMG'] {
+    background-color: #5f5f5f!important;
+}
+[id$='Vertical_TIMG'] {
+    background-color: #5f5f5f!important;
+}
+.navbar-inverse {
+    Background-color: #5f5f5f!important;
+    color: #ffffff!important;
+}
+.dropdown-toggle {
+    color: white!important
+}
+.navbar-brand {
+    color: white!important
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    text-decoration: none;
+    color: white!important;
+    background-color: #5f5f5f;
+}
+body {
+    font-size: 11px!important;
+}
+.nav>li>a {
+    position: relative!important;
+    display: block!important;
+    padding: 15px 5px!important;
+    font-size: 12px!important;
+}
+.navbar-brand {
+    color: white!important;
+    font-size: 13px!important;
+}
+h4 {
+    font-size: 14px!important;
+}
+.container {
+    width: 100%!important;
+}
+.navbar-default {
+    border-color: transparent!important;
+}
+.navbar-inverse {
+    border-color: transparent!important;
+}
+.navbar {
+    border-radius: 0px!important;
+}
+.Dropdown {
+    font-size: inherit;
+    text-transform: uppercase!important;
+    font-size: 11px!important;
+    height: 18px!important;
+    color: Black!important;
+}
+.Dropdown:hover {
+    color: Black!important;
+}
+@media screen and (max-width: 500px) {
+    .divCentro {
+        width: 100%!important;
+    }
+}
+.btn-default {
+    background-color: #5f5f5f!important;
+    border-color: #ccc!important;
+    color: White!important;
+}
+.btn-default:hover {
+    background-color: White!important;
+    border-color: #adadad!important;
+    color: #5f5f5f!important;
+}
+.hvr-underline-from-left:before {
+    background: #5f5f5f;
+}
+.hvr-underline-from-center:before {
+    background: #5f5f5f;
+}
+.CrystalToolBar {
+    height: 0px!important;
+}
+#crViewer_toptoolbar {
+    display: none!important;
+}
+#MainContent_uppRel {
+    margin-top: 0px!important;
+}
+.PaddingRel {
+    padding: 0px 20px 16px 20px;
+}
+#MainContent_CrViewer__UI {
+    border-style: hidden!important;
+}
+#MainContent_crViewer__UI {
+    border-style: hidden!important;
+}
+.intro-header {
+    padding-top: 50px;
+    /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    /*background: url(../Imagens/Teste1.jpg) no-repeat center center;*/
+
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    /*background: #5f5f5f;
+    background: -webkit-linear-gradient(to bottom, #5f5f5f 10% , #transparent);
+    background: linear-gradient(to bottom, #5f5f5f 10%, transparent);*/
+    /*background: transparent;
+    background: -webkit-linear-gradient(-150deg, #0072BC 10% , #50B848);
+    background: linear-gradient(-150deg, #0072BC 10% , #50B848);*/
+    /*background-attachment: fixed;
+    height: 100%;*/
+}
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    color: #5f5f5f;
+}
+.intro-message > h1 {
+    margin: 0;
+    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
+
+    font-size: 8em;
+}
+.intro-message > h3 {
+    /*text-shadow: 2px 2px 3px rgba(0,0,0,0.6);*/
+
+    font-size: 4em;
+}
+#h {
+    padding-top: 150px;
+    text-align: center;
+}
+.welcome {
+    background: #eaeced;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    /*opacity: 0.9;*/
+
+    border-radius: 6px;
+}
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    clear: both;
+    border: 1px solid #42413e;
+    width: 100px;
+}

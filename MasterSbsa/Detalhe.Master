@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableTheming="true" CodeBehind="Detalhe.master.cs" Inherits="MasterSbsa.Detalhe" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+<html lang="pt-br">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head runat="server">
+		<meta http-equiv="Content-Language" content="pt-br">
+
+	    <%--Customizações--%>
+        <link href="../Content/Unificado-min.css" rel="stylesheet" type="text/css" />
+        <%--Customizações--%>
+
+        <%--Para o BootStrap--%>
+	    <%--<link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />--%> 
+	    <%--Para o BootStrap--%>
+
+	    <%--Para o HighSlide--%>
+	    <%--<link href="../Content/highslide.css" rel="stylesheet" type="text/css" />--%>
+	    <%--Para o HighSlide--%>
+
+	    <%--Para o ToolTip--%>
+	    <%--<link href="../Content/ToolTip.css" rel="stylesheet" type="text/css" />--%>
+	    <%--Para o ToolTip--%>
+
+		<%--Para o Font Awesome--%>
+	    <%--<link href="../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />--%>
+	    <%--Para o Font Awesome--%>
+
+		<%--Para o Hover Effects--%>
+	    <%--<link href="../Content/hover.css" rel="stylesheet" type="text/css" />--%>
+	    <%--Para o Hover Effects--%>
+
+        <%--Para o Toastr--%>
+        <link href="../Content/toastr.css" rel="stylesheet" type="text/css" />
+        <%--Para o Toastr--%>
+
+		<script src="../Scripts/Unificado-min.js" type="text/javascript"></script>
+
+	    <%--Para o BootStrap--%>
+	    <%--<script src="../Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+	    <script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>--%>
+	    <%--Para o BootStrap--%>
+
+	    <%--Para o ToolTip--%>
+	    <%--<script src="../Scripts/ToolTip.js" type="text/javascript"></script>--%>
+	    <%--Para o ToolTip--%>
+
+	    <%--Para o BootBox Modal--%>
+        <%--<script src="../Scripts/bootbox.min.js" type="text/javascript"></script>--%>
+	    <%--Para o BootBox Modal--%>
+
+	    <%--Para o HighSlide--%>
+	    <%--<script src="../Scripts/highslide-full.js" type="text/javascript"></script>--%>
+	    <%--Para o HighSlide--%>
+
+	    <%--Para o GridviewScroll--%>
+	    <%--<script src="../Scripts/jquery-1-8-2.min.js" type="text/javascript"></script>
+	    <script src="../Scripts/jquery-ui-1-9-1.min.js" type="text/javascript"></script>
+	    <script src="../Scripts/gridviewScroll.min.js" type="text/javascript"></script>--%>
+	    <%--Para o GridviewScroll--%>
+
+		<%--Para o Crystal--%>
+	    <%--<script src="../Scripts/Relatorios.js" type="text/javascript"></script>--%>
+	    <%--Para o Crystal--%>
+
+        <%--Para o HighCharts--%>
+        <script src="../Scripts/highcharts.js" type="text/javascript"></script>
+        <script src="../Scripts/data.js" type="text/javascript"></script>
+        <script src="../Scripts/exporting.js" type="text/javascript"></script>
+        <script src="../Scripts/no-data-to-display.js" type="text/javascript"></script>
+        <%--Para o HighCharts--%>
+
+        <%--Para o Toastr--%>
+        <script src="../Scripts/toastr.min.js" type="text/javascript"></script>
+        <%--Para o Toastr--%>
+
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(window).keydown(function (event) {
+					if (event.keyCode == 13) {
+						event.preventDefault();
+						return false;
+					}
+				});
+			});
+		</script>
+
+		<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        </asp:ContentPlaceHolder>
+	</head>
+	<body>
+		<form id="Form1" runat="server">
+            <ajaxToolkit:ToolkitScriptManager
+                ID="smPrincipal"
+                runat="server"
+                EnablePartialRendering="true"
+                ScriptMode="Release"
+                EnableScriptGlobalization="true"
+                EnableScriptLocalization="true"
+                EnablePageMethods="true"
+                AsyncPostBackTimeout="9000">
+            </ajaxToolkit:ToolkitScriptManager>
+
+			<asp:UpdateProgress ID="upProgressMenu" runat="server" AssociatedUpdatePanelID="uppPrincipal"
+                DisplayAfter="0">
+                <ProgressTemplate>
+                    <div style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0; z-index: 9999999; background-color: white; opacity: 0.65;">
+                        <table border="0" style="width: 100%; height: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="width: 100%; height: 100%; text-align: center; vertical-align: middle; color: #ffffff;">
+										<div class="thing">
+										  <div class="beam r1 r"></div>
+										  <div class="beam r3 r"></div>
+										  <div class="beam b1 b"></div>
+										  <div class="beam b3 b"></div>
+										</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </ProgressTemplate>
+            </asp:UpdateProgress>
+			<asp:UpdatePanel ID="uppPrincipal" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+					<asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+					</asp:ContentPlaceHolder>
+				</ContentTemplate>
+			</asp:UpdatePanel>
+	    </form>
+	</body>
+</html>

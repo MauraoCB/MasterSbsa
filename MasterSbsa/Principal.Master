@@ -1,0 +1,538 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" EnableTheming="true" CodeBehind="Principal.master.cs"
+    Inherits="MasterSbsa.Principal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<link rel="shortcut icon" href="Imagens/Logo HTML.png" />
+<head id="Head" runat="server">
+    <meta http-equiv="Content-Language" content="pt-br">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title runat="server" id="TituloBarra"></title>
+    <%--Customizações--%>
+    <link href="../Content/Unificado-min.css" rel="stylesheet" type="text/css" />
+    <%--Customizações--%>
+
+    <%--Para o Bootstrap-Switch--%>
+    <%--<link href="../Content/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />--%>
+    <%--Para o Bootstrap-Switch--%>
+
+    <%--Para o BootStrap--%>
+    <%--<link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />--%>
+    <%--Para o BootStrap--%>
+
+    <%--Para o HighSlide--%>
+    <%--<link href="../Content/highslide.css" rel="stylesheet" type="text/css" />--%>
+    <%--Para o HighSlide--%>
+
+    <%--Para o ToolTip--%>
+    <%--<link href="../Content/ToolTip.css" rel="stylesheet" type="text/css" />--%>
+    <%--Para o ToolTip--%>
+
+    <%--Para o Font Awesome--%>
+    <%--<link href="../Content/font-awesome.min.css" rel="stylesheet" type="text/css" />--%>
+    <%--Para o Font Awesome--%>
+
+    <%--Para o Hover Effects--%>
+    <%--<link href="../Content/hover.css" rel="stylesheet" type="text/css" />--%>
+    <%--Para o Hover Effects--%>
+
+    <%--Para o Toastr--%>
+    <link href="../Content/toastr.css" rel="stylesheet" type="text/css" />
+    <%--Para o Toastr--%>
+
+    <%--Customizações--%>
+    <script src="../Scripts/Unificado-min.js" type="text/javascript"></script>
+    <%--Customizações--%>
+
+    <%--Para o Bootstrap-Switch--%>
+    <%--<script src="../Scripts/bootstrap-switch.min.js" type="text/javascript"></script>--%>
+    <%--Para o Bootstrap-Switch--%>
+
+    <%--Para o BootStrap--%>
+    <%--<script src="../Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+			<script src="../Scripts/bootstrap.min.js" type="text/javascript"></script>--%>
+    <%--Para o BootStrap--%>
+
+    <%--Para o ToolTip--%>
+    <%--<script src="../Scripts/ToolTip.js" type="text/javascript"></script>--%>
+    <%--Para o ToolTip--%>
+
+    <%--Para o BootBox Modal--%>
+    <%--<script src="../Scripts/bootbox.min.js" type="text/javascript"></script>--%>
+    <%--Para o BootBox Modal--%>
+
+    <%--Para o HighSlide--%>
+    <%--<script src="../Scripts/highslide-full.js" type="text/javascript"></script>--%>
+    <%--Para o HighSlide--%>
+
+    <%--Para o GridviewScroll--%>
+    <%--<script src="../Scripts/jquery-1-8-2.min.js" type="text/javascript"></script>
+			<script src="../Scripts/jquery-ui-1-9-1.min.js" type="text/javascript"></script>
+			<script src="../Scripts/gridviewScroll.min.js" type="text/javascript"></script>--%>
+    <%--Para o GridviewScroll--%>
+
+    <%--Para o Crystal--%>
+    <%--<script src="../Scripts/Relatorios.js" type="text/javascript"></script>--%>
+    <%--Para o Crystal--%>
+
+    <%--Para o HighCharts--%>
+    <script src="../Scripts/highcharts.js" type="text/javascript"></script>
+    <script src="../Scripts/data.js" type="text/javascript"></script>
+    <script src="../Scripts/exporting.js" type="text/javascript"></script>
+    <script src="../Scripts/no-data-to-display.js" type="text/javascript"></script>
+    <%--Para o HighCharts--%>
+
+    <%--Para o Toastr--%>
+    <script src="../Scripts/toastr.min.js" type="text/javascript"></script>
+    <%--Para o Toastr--%>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(window).keydown(function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    return false;
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+			#login-dp
+			{
+				min-width: 200px;
+				padding: 14px 14px 0;
+				overflow: hidden;
+				background-color: rgba(255,255,255);
+			}
+			.navbar-brand
+			{
+				padding: 0px;
+			}
+			.navbar-brand > img
+			{
+				height: 100%;
+				padding: 6px;
+				width: auto;
+			}
+			.icon-size
+			{
+				font-size: 87px;
+			}
+			.navbar-login
+			{
+				width: 305px;
+				padding: 10px;
+				padding-bottom: 0px;
+			}
+			.input-group
+			{
+				margin-bottom: 10px;
+			}
+			.input-group-addon
+			{
+				padding: 7px 12px;
+			}
+			.login
+			{
+				/*padding: 15px 0!important;*/
+				height: 32px !important;
+			}
+			@media (max-width: 766px)
+            {
+                #TemaSemLogin
+                {
+                    display: none!important;
+                }
+                #TemaComLogin
+                {
+                    display: none!important;
+                }
+                /*#liPerfis
+                {
+                    display: none!important;
+                }*/
+                .nav>li>a
+                {
+                    font-size: 19px!important;
+                }
+                .dropdown-menu>li>a
+                {
+                    font-size: 16px!important;
+                    color: White!important;
+                }
+                .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-text
+                {
+                    font-size: 19px!important;
+                }
+                #Usuario
+                {
+                    display: none!important;
+                }
+                #txtLogin
+                {
+                    height: 40px!important;
+                    font-size: 17px!important;
+                }
+                #txtSenha
+                {
+                    height: 40px!important;
+                    font-size: 17px!important;
+                }
+                #glyUser
+                {
+                    top: 5px;
+                }
+                #glyPass
+                {
+                    top: 5px;
+                }
+                #btnLogin
+                {
+                    padding: 10px 16px;
+                    font-size: 18px;
+                    line-height: 1.3333333;
+                    border-radius: 6px;
+                }
+                #AnimacaoMobile
+                {
+                    display: block!important;
+                }
+                #AnimacaoDesktop
+                {
+                    display: none!important;
+                }
+            }
+            @media (min-width: 766px)
+            {
+                #liSairMobile
+                {
+                    display: none!important;
+                }
+                #AnimacaoDesktop
+                {
+                    display: block!important;
+                }
+                #AnimacaoMobile
+                {
+                    display: none!important;
+                }
+            }
+            .spinner
+            {
+              margin: 100px auto 0;
+              width: 70px;
+              text-align: center;
+            }
+            .spinner > div
+            {
+              width: 50px;
+              height: 50px;
+              background-color: #333;
+              border-radius: 100%;
+              display: inline-block;
+              -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+              animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+            }
+            .spinner .bounce1
+            {
+              -webkit-animation-delay: -0.32s;
+              animation-delay: -0.32s;
+            }
+            .spinner .bounce2
+            {
+              -webkit-animation-delay: -0.16s;
+              animation-delay: -0.16s;
+            }
+            @-webkit-keyframes sk-bouncedelay
+            {
+              0%, 80%, 100% { -webkit-transform: scale(0) }
+              40% { -webkit-transform: scale(1.0) }
+            }
+            @keyframes sk-bouncedelay
+            {
+              0%, 80%, 100% {
+                -webkit-transform: scale(0);
+                transform: scale(0);
+              } 40% {
+                -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+              }
+            }
+		</style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <ajaxToolkit:ToolkitScriptManager ID="smPrincipal" runat="server" EnablePartialRendering="true"
+        ScriptMode="Release" EnableScriptGlobalization="true" EnableScriptLocalization="true"
+        EnablePageMethods="true" AsyncPostBackTimeout="9000">
+    </ajaxToolkit:ToolkitScriptManager>
+    <%
+        if (Session["UsuarioMasterPage"] == null)
+        {
+    %>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="Index.aspx"><img src="Imagens/Logo.png" alt=""></a>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li style="padding: 9px;">
+						<div class="input-group" style="display: flex;padding: 0px;margin-bottom: 0px;">
+							<span class="input-group-addon" style="width: 35px;"><i id="glyUser" class="glyphicon glyphicon-user"></i></span>
+							<asp:TextBox runat="server" CssClass="form-control txt login" ID="txtLogin"  placeholder="Usuário" required></asp:TextBox>
+						</div>
+					</li>
+					<li style="padding: 9px;">
+						<div class="input-group" style="display: flex;padding: 0px;margin-bottom: 0px;">
+							<span class="input-group-addon" style="width: 35px;"><i id="glyPass" class="glyphicon glyphicon-lock"></i></span>
+							<asp:TextBox runat="server" CssClass="form-control txt login" ID="txtSenha" onkeydown="if (event.keyCode == 13) document.getElementById('btnLogin').click()" TextMode="Password" placeholder="Senha" required></asp:TextBox>
+						</div>
+					</li>
+					<li style="padding: 9px;">
+						<asp:Button runat="server" ID="btnLogin" class="btn btn-success btn-block" Text="Entrar" OnClick="btnLogin_Click" formnovalidate/>
+					</li>
+					<li class="dropdown">
+						<%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tema<span class="fa fa-cog fa-spin fa-lg fa-fw"></span></a>--%>
+						<a href="#" id="TemaSemLogin" class="dropdown-toggle" data-toggle="dropdown">Tema<span class="fa fa-paint-brush fa-lg fa-fw"></span></a>
+						<ul id="login-dp" class="dropdown-menu">
+							<li>
+								<div class="row">
+									<div class="col-md-12">
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#0072BC" ForeColor="#ffffff" ID="btnTemaAzul" class="btn btn-primary btn-block" Text="Azul" OnClick="btnTemaAzul_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#325d88" ForeColor="#ffffff" ID="btnTemaAzulEscuro" class="btn btn-primary btn-block" Text="Azul Escuro" OnClick="btnTemaAzulEscuro_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#CBDB2B" ForeColor="#ffffff" ID="btnTemaLimao" class="btn btn-primary btn-block" Text="Limão" OnClick="btnTemaLimao_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#FFC20A" ForeColor="#ffffff" ID="btnTemaOuro" class="btn btn-primary btn-block" Text="Ouro" OnClick="btnTemaOuro_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#DB0B7D" ForeColor="#ffffff" ID="btnTemaOutubroRosa" class="btn btn-primary btn-block" Text="Outubro Rosa" OnClick="btnTemaOutubroRosa_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#5f5f5f" ForeColor="#ffffff" ID="btnTemaPadrao" class="btn btn-primary btn-block" Text="Padrão" OnClick="btnTemaPadrao_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#00A651" ForeColor="#ffffff" ID="btnTemaSantosBrasil" class="btn btn-primary btn-block" Text="Santos Brasil" OnClick="btnTemaSantosBrasil_Click" formnovalidate/>
+										</div>
+										<div class="form-group">
+											<asp:Button runat="server" BackColor="#cd2a19" ForeColor="#ffffff" ID="btnTemaVermelho" class="btn btn-primary btn-block" Text="Vermelho" OnClick="btnTemaVermelho_Click" formnovalidate/>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+    <%
+        }
+        else
+        {
+    %>
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+	    <div class="container">
+		    <div class="navbar-header" runat="server" id="Inicio">
+
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav navbar-left" runat="server" id="Menu">
+
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+				    <li class="dropdown" id="Usuario">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+						    <asp:Label runat="server" ID="lblUsuario" Text=""></asp:Label>
+						    <span class="fa fa-user fa-lg fa-fw"></span>
+					    </a>
+					    <ul id="login-dp" class="dropdown-menu">
+						    <li>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">
+										    <asp:Image runat="server" ID="Foto" class="glyphicon glyphicon-user icon-size" style="width: 90px; border-radius: 50%;"/>
+									    </p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">Bem Vindo(a)</p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">
+										    <strong>
+											    <asp:Label runat="server" ID="lblNome" Text=""></asp:Label>
+										    </strong>
+									    </p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">Sistema</p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">
+										    <strong>
+											    <asp:Label runat="server" ID="lblSistema" Text=""></asp:Label>
+										    </strong>
+									    </p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">Perf. Acesso</p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">
+										    <strong>
+											    <asp:Label runat="server" ID="lblPerfil" Text=""></asp:Label>
+										    </strong>
+									    </p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">Ambiente</p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-lg-12">
+									    <p class="text-center">
+										    <strong>
+											    <asp:Label runat="server" ID="lblAmbiente" Text=""></asp:Label>
+										    </strong>
+									    </p>
+								    </div>
+							    </div>
+							    <div class="row">
+								    <div class="col-md-12">
+									    <div class="form-group">
+										    <asp:Button runat="server" ID="btnSair" class="btn btn-success btn-block" Text="Sair" OnClick="btnSair_Click" formnovalidate/>
+									    </div>
+								    </div>
+							    </div>
+						    </li>
+					    </ul>
+				    </li>
+				    <li class="dropdown">
+					    <%--<a href="#" class="dropdown-toggle" data-toggle="dropdown">Tema<span class="fa fa-cog fa-spin fa-lg fa-fw"></span></a>--%>
+					    <a href="#" id="TemaComLogin" class="dropdown-toggle" data-toggle="dropdown">Tema<span class="fa fa-paint-brush fa-lg fa-fw"></span></a>
+					    <ul id="login-dp" class="dropdown-menu">
+						    <li>
+							    <div class="row">
+								    <div class="col-md-12">
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#0072BC" ForeColor="#ffffff" ID="Button1" class="btn btn-primary btn-block" Text="Azul" OnClick="btnTemaAzul_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#325d88" ForeColor="#ffffff" ID="Button2" class="btn btn-primary btn-block" Text="Azul Escuro" OnClick="btnTemaAzulEscuro_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#CBDB2B" ForeColor="#ffffff" ID="Button4" class="btn btn-primary btn-block" Text="Limão" OnClick="btnTemaLimao_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#FFC20A" ForeColor="#ffffff" ID="Button5" class="btn btn-primary btn-block" Text="Ouro" OnClick="btnTemaOuro_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#DB0B7D" ForeColor="#ffffff" ID="Button6" class="btn btn-primary btn-block" Text="Outubro Rosa" OnClick="btnTemaOutubroRosa_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#5f5f5f" ForeColor="#ffffff" ID="Button7" class="btn btn-primary btn-block" Text="Padrão" OnClick="btnTemaPadrao_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#00A651" ForeColor="#ffffff" ID="Button8" class="btn btn-primary btn-block" Text="Santos Brasil" OnClick="btnTemaSantosBrasil_Click" formnovalidate/>
+									    </div>
+									    <div class="form-group">
+										    <asp:Button runat="server" BackColor="#cd2a19" ForeColor="#ffffff" ID="Button9" class="btn btn-primary btn-block" Text="Vermelho" OnClick="btnTemaVermelho_Click" formnovalidate/>
+									    </div>
+								    </div>
+							    </div>
+						    </li>
+					    </ul>
+				    </li>
+				    <li style="padding: 9px;" id="liPerfis">
+					    <asp:DropDownList
+						    runat="server"
+						    ID="ddlPerfis"
+						    CssClass="form-control txt login"
+						    AutoPostBack="true"
+						    OnSelectedIndexChanged="ddlPerfis_SelectedIndexChanged">
+					    </asp:DropDownList>
+				    </li>
+                    <li style="padding: 0px 10px 0px 10px;" id="liSairMobile">
+                        <hr style="margin-top: 0px;margin-bottom: 0px;"/>
+                        <h4 class="text-center" style="font-size: 16px!important;"><asp:Label runat="server" ID="lblNomeMobile" Text=""></asp:Label></h4>
+					    <asp:Button runat="server" ID="btnSairMobile" class="btn btn-lg btn-primary btn-block" Text="Sair" OnClick="btnSair_Click" formnovalidate/>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+    </nav>
+    <%
+        }
+    %>
+    <asp:UpdateProgress ID="upProgressMenu" runat="server" AssociatedUpdatePanelID="uppPrincipal"
+        DisplayAfter="0">
+        <ProgressTemplate>
+            <div style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0;
+                right: 0; left: 0; z-index: 9999999; background-color: white; opacity: 0.65;"
+                id="AnimacaoDesktop">
+                <table border="0" style="width: 100%; height: 100%;">
+                    <tbody>
+                        <tr>
+                            <td style="width: 100%; height: 100%; text-align: center; vertical-align: middle;
+                                color: #ffffff;">
+                                <div class="thing">
+                                    <div class="beam r1 r">
+                                    </div>
+                                    <div class="beam r3 r">
+                                    </div>
+                                    <div class="beam b1 b">
+                                    </div>
+                                    <div class="beam b3 b">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="position: fixed; text-align: center; height: 100%; width: 100%; top: 0; right: 0; left: 0; z-index: 9999999; background-color: white; opacity: 0.95;" id="AnimacaoMobile">
+                <div class="spinner" style="position: absolute; margin: auto; top: 0; right: 0; bottom: 0; left: 0; width: 160px; height: 100px; border-radius: 3px;">
+                  <div class="bounce1" style="background-color: rgb(0,110,200);"></div>
+                  <div class="bounce2" style="background-color: rgb(0,145,55);"></div>
+                  <div class="bounce3" style="background-color: rgb(0,110,200);"></div>
+                </div>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
+    <asp:UpdatePanel ID="uppPrincipal" runat="server" UpdateMode="Conditional">
+        <ContentTemplate>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </ContentTemplate>
+    </asp:UpdatePanel>
+    </form>
+</body>
+</html>
