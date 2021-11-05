@@ -1,0 +1,9 @@
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\bin\MasterSbsa.dll.config
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\bin\MasterSbsa.dll
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\bin\MasterSbsa.pdb
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\obj\Release\MasterSbsa.csprojAssemblyReference.cache
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\obj\Release\MasterSbsa.csproj.CopyComplete
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\obj\Release\MasterSbsa.dll
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\obj\Release\MasterSbsa.pdb
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\obj\Release\MasterSbsa.csproj.CoreCompileInputs.cache
+C:\Users\abmz\Source\Workspaces\INFORMATICA\MasterSbsa\MasterSbsa\MasterSbsa\bin\System.DirectoryServices.dll
